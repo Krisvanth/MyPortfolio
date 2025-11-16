@@ -9682,3 +9682,26 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+/* GIF column sizing and styling */
+.one-third-gif {
+  width: 35%;
+  min-width: 280px;
+  max-width: 500px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  margin-top: -90px;   /* ⬆️ move GIF upward */
+}
+
+
+.intro-gif {
+  width: 100%;         /* fill container */
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.7); /* makes GIF 20% bigger visually */
+  transform-origin: center;
+}
+
+
+@media (min-width: 1400px) {
+  .one-third-gif { max-width: 420px; }
+}
