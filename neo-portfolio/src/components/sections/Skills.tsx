@@ -1,21 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SectionBackground } from "@/components/ui/SectionBackground";
 
 const skills = {
     "Core Capabilities": ["Machine Learning", "Deep Learning", "Generative AI", "Computer Vision", "NLP", "Prompt Engineering", "Generative Adversarial Networks (GANs)"],
-    "Frameworks & Libraries": ["Langchain", "FastAPI", "Streamlit", "TensorFlow/PyTorch", "OpenCV", "Detectron2", "Ollama"],
+    "Frameworks & Libraries": ["Langchain", "LangGraph", "LangSmith", "FastAPI", "Streamlit", "TensorFlow/PyTorch", "OpenCV", "Detectron2", "Ollama"],
     "Tools & Platforms": ["Docker", "Git/GitHub", "Linux", "Microsoft Azure Cognitive Services", "Tableau"],
-    "Database & Search": ["Qdrant", "OpenSearch", "SQL", "Vector DBs"],
-    "Languages": ["Python", "HTML5", "CSS3", "JavaScript/TypeScript"]
+    "Database & Search": ["MySQL", "MongoDB", "Redis", "Qdrant", "OpenSearch"],
+    "Languages": ["Python", "HTML5", "CSS3"]
 };
 
 export function Skills() {
     return (
-        <section id="skills" className="py-20 bg-[#0f0f0f] relative overflow-hidden">
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--primary)]/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+        <section id="skills" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+            <SectionBackground variant="accent" intensity="medium" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
@@ -27,9 +26,6 @@ export function Skills() {
                     <h2 className="text-3xl md:text-4xl font-mono font-bold text-[var(--foreground)] mb-4">
                         <span className="text-[var(--primary)]">::</span> EXPERTISE
                     </h2>
-                    <p className="text-[var(--foreground)]/60 max-w-2xl mx-auto">
-                        Operational capabilities and technical competencies.
-                    </p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

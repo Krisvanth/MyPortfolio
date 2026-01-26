@@ -83,7 +83,7 @@ export function Hero({ onInteract }: HeroProps) {
                                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                             </a>
                             <a href="https://drive.google.com/file/d/1ZS_JbS_2n8R5EzLZ5XadEIEyfNRjGxyS/view?usp=sharing" target="_blank" className="relative group px-8 py-3 border border-[var(--primary)] text-[var(--primary)] rounded-sm flex items-center gap-2 hover:bg-[var(--primary)]/10 transition-all font-mono overflow-hidden">
-                                <span className="relative z-10 flex items-center gap-2">Download Data_Log <Download size={18} /></span>
+                                <span className="relative z-10 flex items-center gap-2">Download Resume <Download size={18} /></span>
                                 <div className="absolute inset-0 bg-[var(--primary)]/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300" />
                             </a>
                         </div>

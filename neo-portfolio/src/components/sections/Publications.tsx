@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { FileText, ShieldAlert } from "lucide-react";
+import { SectionBackground } from "@/components/ui/SectionBackground";
 
 export function Publications() {
     return (
-        <section id="publications" className="py-20 bg-[#0a0a0a]">
-            <div className="container mx-auto px-4">
+        <section id="publications" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+            <SectionBackground variant="secondary" intensity="low" />
+            <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -24,8 +26,8 @@ export function Publications() {
                                     <ShieldAlert size={16} className="text-[var(--primary)]" />
                                     <span className="text-xs font-mono text-[var(--primary)] border border-[var(--primary)] px-2 py-0.5 rounded-full">PATENT FILED - 2025</span>
                                 </div>
-                                <h4 className="text-lg font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
-                                    <a href="#" className="hover:underline">Multi-Agent Asset-to-Telemetry Tag Mapping System</a>
+                                <h4 className="text-lg font-bold text-[var(--foreground)]">
+                                    Multi-Agent Asset-to-Telemetry Tag Mapping System
                                 </h4>
                                 <p className="text-[var(--foreground)]/60 text-sm mt-2">
                                     Integrating OT/IT with context-aware rationalization engines to map telemetry to assets accurately.
@@ -37,8 +39,8 @@ export function Publications() {
                                     <ShieldAlert size={16} className="text-[var(--secondary)]" />
                                     <span className="text-xs font-mono text-[var(--secondary)] border border-[var(--secondary)] px-2 py-0.5 rounded-full">DEFENSIVE PUB - 2025</span>
                                 </div>
-                                <h4 className="text-lg font-bold text-[var(--foreground)] group-hover:text-[var(--secondary)] transition-colors">
-                                    <a href="" target="_blank" className="hover:underline">Self-Reasoning & Error-Correcting SQL Generation</a>
+                                <h4 className="text-lg font-bold text-[var(--foreground)]">
+                                    Self-Reasoning & Error-Correcting SQL Generation
                                 </h4>
                                 <p className="text-[var(--foreground)]/60 text-sm mt-2">
                                     Reflection Tuning method for autonomous LLM validation and correction of SQL queries without RAG.

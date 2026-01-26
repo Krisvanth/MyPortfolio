@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Send, Github, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
+import { SectionBackground } from "@/components/ui/SectionBackground";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -53,8 +54,9 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 bg-[#050505] border-t border-[var(--border)]">
-            <div className="container mx-auto px-4 max-w-4xl">
+        <section id="contact" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+            <SectionBackground variant="primary" intensity="low" />
+            <div className="container mx-auto px-4 max-w-4xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

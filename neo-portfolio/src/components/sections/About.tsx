@@ -64,7 +64,11 @@ const education = [
         degree: "B.Tech in Information Technology",
         school: "Kongu Engineering College",
         period: "2020 - 2024",
-        details: "CGPA: 8.76/10. Awards: Overall Best Outgoing Student, Best Student in Co-curricular Activities, Best Project. Successful participation in ideathons and proof of concept projects."
+        points: [
+            "Expertise in core computer concepts, including ML, Cloud, and IoT with a CGPA of 8.76.",
+            "Recognized for academic excellence, receiving awards for Overall Best Outgoing Student, Best Student in Co-curricular Activities, and Best Project.",
+            "Successful participation in ideathons and proof of concept projects demonstrates innovation and problem-solving skills."
+        ]
     },
     {
         id: 2,
@@ -82,10 +86,13 @@ const education = [
     }
 ]
 
+import { SectionBackground } from "@/components/ui/SectionBackground";
+
 export function About() {
     return (
-        <section id="about" className="py-20 relative bg-[#0a0a0a]">
-            <div className="container mx-auto px-4">
+        <section id="about" className="py-20 relative bg-[#0a0a0a] overflow-hidden">
+            <SectionBackground variant="primary" intensity="medium" />
+            <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -95,9 +102,7 @@ export function About() {
                     <h2 className="text-3xl md:text-4xl font-mono font-bold text-[var(--foreground)] mb-4">
                         <span className="text-[var(--primary)]">&lt;</span>JOURNEY SO FAR../<span className="text-[var(--primary)]">&gt;</span>
                     </h2>
-                    <p className="text-[var(--foreground)]/60 max-w-2xl mx-auto">
-                        Tracing the execution path of my professional journey.
-                    </p>
+
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-12">
@@ -155,9 +160,24 @@ export function About() {
                                     </div>
                                     <h4 className="text-xl font-bold text-[var(--foreground)]">{item.degree}</h4>
                                     <h5 className="text-lg text-[var(--foreground)]/80 mb-2">{item.school}</h5>
-                                    <p className="text-[var(--foreground)]/60 text-sm leading-relaxed">
-                                        {item.details}
-                                    </p>
+
+                                    {/* Render points if available (B.Tech), otherwise render details string (Schools) */}
+                                    {item.points ? (
+                                        <div className="space-y-2 mt-2">
+                                            {item.points.map((point, index) => (
+                                                <div key={index} className="flex gap-3 items-start">
+                                                    <span className="text-[var(--secondary)] text-xs mt-1.5">›</span>
+                                                    <p className="text-[var(--foreground)]/60 text-sm leading-relaxed">
+                                                        {point}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <p className="text-[var(--foreground)]/60 text-sm leading-relaxed">
+                                            {item.details}
+                                        </p>
+                                    )}
                                 </motion.div>
                             ))}
                         </div>

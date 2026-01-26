@@ -8,6 +8,7 @@ import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 import { Publications } from "@/components/sections/Publications";
 import { Contact } from "@/components/sections/Contact";
+import { AIAssistant } from "@/components/ui/AIAssistant";
 
 export default function Home() {
   const [isSystemLive, setIsSystemLive] = useState(false);
@@ -24,8 +25,10 @@ export default function Home() {
           <Projects />
           <Publications />
           <Contact />
+          <AIAssistant />
         </>
       )}
     </main>
   );
 }
+
